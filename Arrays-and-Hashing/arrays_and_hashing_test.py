@@ -3,6 +3,7 @@ import ContainsDuplicate.contains_duplicate as duplicate
 import ValidAnagram.valid_anagram as valid_anagram
 import TwoSum.two_sum as two_sum
 import GroupAnagram.group_anagram as group_anagram
+import TopKFrequent.top_k_frequent as top_k_frequent
 
 
 class TestArraysAndHashing(unittest.TestCase):
@@ -27,6 +28,10 @@ class TestArraysAndHashing(unittest.TestCase):
                          [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']])
         self.assertEqual(group_anagram.groupAnagrams(self, [""]), [[""]])
         self.assertEqual(group_anagram.groupAnagrams(self, ["a"]), [["a"]])
+
+    def testTopKFrequent(self):
+        self.assertEqual(top_k_frequent.topKFrequent(self, [1, 1, 1, 2, 2, 3], 2), [1, 2])
+        self.assertEqual(top_k_frequent.topKFrequent(self, [1], 1), [1])
 
 
 if __name__ == '__main__':
